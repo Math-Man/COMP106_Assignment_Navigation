@@ -222,7 +222,7 @@ public class LocationsAndRoads {
      		 c.setOnMouseClicked(new EventHandler<MouseEvent>() {	//Fix the mess upper code made
     		      public void handle(MouseEvent me) {
 
-    		   	  System.out.println("CITY " + value.getName());
+    		   	  //System.out.println("CITY " + value.getName());
     		   	
     		   	  //City selection
     		   	  
@@ -264,8 +264,8 @@ public class LocationsAndRoads {
     		   		   //Change the certain Road objects Colour accordingly
     		   		   
     		   		   determineNavigation(selectedList.get(0),selectedList.get(1));	//This is where the magic happens
-    		   		   lab.setText("TOTAL DISTANCE: " + Math.ceil(totalDistance/2) + " MEASUREMENT UNITS STUFF");
-    		   		   if (totalDistance == 0) {lab.setText("IMPROBABLE COMMAND!!");}
+    		   		   lab.setText("Total Distance: " + Math.ceil(totalDistance/2) + " Units");
+    		   		   if (totalDistance == 0) {lab.setText("Not possible.");}
     		   		   totalDistance = 0;
     		   		   
     		   		   
@@ -274,7 +274,7 @@ public class LocationsAndRoads {
     		   	  } 
     		   	  else if(selections.get(0) & selections.get(1))//If both cities are selected do this
     		   	  {
-    		   		System.out.println("SELECT RESET: " + selectedList.get(0).getName());
+    		   		//System.out.println("SELECT RESET: " + selectedList.get(0).getName());
     		   		selectedList.get(0).getCircleObject().setFill(Color.RED); //Reset the Colors of old selections
     		   		selectedList.get(1).getCircleObject().setFill(Color.RED);
     		   		selections.add(0, false);
@@ -424,7 +424,7 @@ public class LocationsAndRoads {
 				ArrayList<Road> ROADSTHATWEAREUSINGLOL = new ArrayList<Road>();
 				ArrayList<Road> ROADSTHATWEAREACTUALLYUSINGLOLOL = new ArrayList<Road>();
 				
-				System.out.println("ITS OVER!");
+				//System.out.println("ITS OVER!");
 				
 				while(c2.getPrevious() != null) 	//C2 IS OUR TARGET SO WE TRACE IT BACK
 				{
